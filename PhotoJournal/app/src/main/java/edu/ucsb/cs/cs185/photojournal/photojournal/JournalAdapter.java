@@ -4,6 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 
 /**
  * Created by rexluan on 3/14/17.
@@ -17,7 +19,7 @@ public class JournalAdapter extends BaseAdapter {
      */
     @Override
     public int getCount() {
-        return 0;
+        return JournalManager.ITEMS.size();
     }
 
     /**
@@ -29,7 +31,7 @@ public class JournalAdapter extends BaseAdapter {
      */
     @Override
     public Object getItem(int position) {
-        return null;
+        return JournalManager.mList.get(position).get(0).image;
     }
 
     /**
@@ -40,7 +42,7 @@ public class JournalAdapter extends BaseAdapter {
      */
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     /**
@@ -63,6 +65,19 @@ public class JournalAdapter extends BaseAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        ImageView imageView;
+        if(convertView==null){
+            imageView = new ImageView(parent.getContext());
+            imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setPadding(8, 8, 8, 8);
+            imageView.setCropToPadding(true);
+        }
+        else{
+            imageView = (ImageView)convertView;
+        }
+
+        // TODO: 3/18/17  set click listener to imageView
+        return imageView;
     }
 }
