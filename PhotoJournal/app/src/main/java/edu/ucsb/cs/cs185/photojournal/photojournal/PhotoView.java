@@ -5,4 +5,5 @@ package edu.ucsb.cs.cs185.photojournal.photojournal;
  */
 
 public class PhotoView {
+
 }
