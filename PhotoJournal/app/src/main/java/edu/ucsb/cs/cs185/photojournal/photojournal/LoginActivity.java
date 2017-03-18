@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Please check your sign-in information adn try again", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Please check your sign-in information and try again", Toast.LENGTH_LONG).show();
         _loginButton.setEnabled(true);
     }
 
@@ -109,14 +109,14 @@ public class LoginActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+            _emailText.setError("Please enter a valid email address");
             valid = false;
         } else {
             _emailText.setError(null);
         }
 
         if (password.isEmpty()) {
-            _passwordText.setError("enter a valid password");
+            _passwordText.setError("Please enter a valid password");
             valid = false;
         } else {
             _passwordText.setError(null);
