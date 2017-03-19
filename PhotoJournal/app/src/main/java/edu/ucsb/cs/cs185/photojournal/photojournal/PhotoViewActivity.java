@@ -43,8 +43,6 @@ public class PhotoViewActivity extends AppCompatActivity{
         Format formatter = new SimpleDateFormat("MM/dd/yyyy");
         String s = formatter.format(images.get(imgIndex).date);
         date.setText(s);
-
-
     }
 
 }
