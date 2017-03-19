@@ -9,4 +9,10 @@
         android:id="@+id/list_img"
         android:layout_height="150dp"
         android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/img_date"
+        android:layout_height="150dp"
+        />
 </LinearLayout>
