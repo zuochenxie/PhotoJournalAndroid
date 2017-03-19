@@ -32,11 +32,13 @@ public class JournalManager {
     }
 
     public static class Journal{
+        public Uri uri;
         public Bitmap image;
         public String caption;
         public Date date;
 
-        public Journal(Bitmap _image){
+        public Journal(Uri uri, Bitmap _image){
+            this.uri = uri;
             image = _image;
             caption = "";
             date = new Date();

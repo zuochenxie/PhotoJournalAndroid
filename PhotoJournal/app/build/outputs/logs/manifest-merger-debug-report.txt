@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:3:5-58
 		INJECTED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/
 		INJECTED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:5:5-23:19
+ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:5:5-24:19
 MERGED from [com.android.support:design:25.1.1] /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
@@ -60,6 +60,10 @@ ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/
 		ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:21:49-85
 	android:name
 		ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:21:19-48
+activity#edu.ucsb.cs.cs185.photojournal.photojournal.PhotoViewActivity
+ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:22:9-54
+	android:name
+		ADDED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml:22:19-52
 uses-sdk
 INJECTED from /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.1] /Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:21:5-23:62
