@@ -2715,12 +2715,14 @@ containing a value of this type.
         public static final int customPanel=0x7f0d0054;
         public static final int decor_content_parent=0x7f0d0062;
         public static final int default_activity_button=0x7f0d0047;
+        public static final int delete_photo=0x7f0d00a1;
         public static final int design_bottom_sheet=0x7f0d007d;
         public static final int design_menu_item_action_area=0x7f0d0084;
         public static final int design_menu_item_action_area_stub=0x7f0d0083;
         public static final int design_menu_item_text=0x7f0d0082;
         public static final int design_navigation_view=0x7f0d0081;
         public static final int disableHome=0x7f0d0012;
+        public static final int edit_photo=0x7f0d00a0;
         public static final int edit_query=0x7f0d0066;
         public static final int end=0x7f0d002a;
         public static final int end_padder=0x7f0d009c;
@@ -2903,13 +2905,15 @@ containing a value of this type.
         public static final int notification_template_media_custom=0x7f040039;
         public static final int notification_template_part_chronometer=0x7f04003a;
         public static final int notification_template_part_time=0x7f04003b;
-        public static final int select_dialog_item_material=0x7f04003c;
-        public static final int select_dialog_multichoice_material=0x7f04003d;
-        public static final int select_dialog_singlechoice_material=0x7f04003e;
-        public static final int support_simple_spinner_dropdown_item=0x7f04003f;
+        public static final int photo_view=0x7f04003c;
+        public static final int select_dialog_item_material=0x7f04003d;
+        public static final int select_dialog_multichoice_material=0x7f04003e;
+        public static final int select_dialog_singlechoice_material=0x7f04003f;
+        public static final int support_simple_spinner_dropdown_item=0x7f040040;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;
+        public static final int photo_menu=0x7f0e0001;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

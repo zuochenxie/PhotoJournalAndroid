@@ -2,6 +2,7 @@ package edu.ucsb.cs.cs185.photojournal.photojournal;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 
 /**
@@ -16,7 +17,6 @@ public class PhotoView extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_view);
-
     }
 
 }
