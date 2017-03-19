@@ -76,6 +76,10 @@
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_media.xml"
     },
     {
+        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/list_image.xml",
+        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/layout/list_image.xml"
+    },
+    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout/design_menu_item_action_area.xml"
     },
@@ -138,6 +142,10 @@
     {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/list_fragment.xml",
+        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/layout/list_fragment.xml"
     },
     {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
