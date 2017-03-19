@@ -19,8 +19,8 @@ public class ImageManager {
     public ImageManager(Uri uri, Bitmap bitmap){
         this.uri = uri;
         this.bitmap = bitmap;
-        this.title = "The Time I Ate a Whole Goat";
-        this.description = "There was a goat on my plate and I just ate the whole thing. I'm not sure if it was alive or not but you know it was a goat so I ate it because it was quite tasty. Yes goats are good food, yum, goats.\n Have you ever eaten a goat before? I'm not sure me neither. I know this photo says I ate a goat once, but that's a lie. I've never eaten a goat. I'm sorry to mislead you.";
+        this.title = "Lorum Ipsum";
+        this.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.";
         this.date = new Date();
     }
 }

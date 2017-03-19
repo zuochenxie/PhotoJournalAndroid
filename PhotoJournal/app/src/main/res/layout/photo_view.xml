@@ -10,6 +10,11 @@
         android:layout_height="500dp"
         android:id="@+id/activityImage"
         android:background="@android:color/black"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
     <TextView
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
