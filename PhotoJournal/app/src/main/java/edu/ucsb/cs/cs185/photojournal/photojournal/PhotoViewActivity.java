@@ -11,6 +11,9 @@ import android.widget.TextView;
  * Created by joesong on 3/18/17.
  */
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
+
 import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.images;
 
 public class PhotoViewActivity extends AppCompatActivity{
@@ -36,6 +39,11 @@ public class PhotoViewActivity extends AppCompatActivity{
         image.setImageBitmap(img);
         title.setText(images.get(imgIndex).title);
         description.setText(images.get(imgIndex).description);
+
+        Format formatter = new SimpleDateFormat("MM/dd/yyyy");
+        String s = formatter.format(images.get(imgIndex).date);
+        date.setText(s);
+
 
     }
 
