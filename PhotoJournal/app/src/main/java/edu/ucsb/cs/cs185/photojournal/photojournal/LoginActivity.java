@@ -13,6 +13,8 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.loggedIn;
+
 /**
  * Created by zuochenxie on 3/12/17.
  */

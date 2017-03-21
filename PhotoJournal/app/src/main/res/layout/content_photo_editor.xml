@@ -20,7 +20,7 @@
         android:hint="caption"
         android:ems="10"
         android:layout_marginTop="32dp"
-        android:id="@+id/photo_location"
+        android:id="@+id/photo_caption"
         android:layout_below="@+id/photo_location"
         android:layout_alignStart="@+id/photo_location" />
 
@@ -31,6 +31,7 @@
         android:layout_marginTop="68dp"
         android:alpha="1"
         android:elevation="7dp"
+        android:background="@drawable/plus_math"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

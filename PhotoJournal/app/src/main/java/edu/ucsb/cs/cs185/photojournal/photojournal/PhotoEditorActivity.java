@@ -14,14 +14,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Date;
+
+import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.images;
 
 public class PhotoEditorActivity extends AppCompatActivity {
     private int PICK_IMAGE_REQUEST = 1;
     private Uri uri;
+    private PhotoEditorActivity photoview = this;
 //    BitMapManager images = new BitMapManager();
 
     @Override
@@ -65,6 +70,35 @@ public class PhotoEditorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                try{
+                    Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+
+                    EditText location = (EditText) findViewById(R.id.photo_location);
+                    EditText caption = (EditText) findViewById(R.id.photo_caption);
+                    EditText title = (EditText) findViewById(R.id.photo_title);
+                    DatePicker date = (DatePicker) findViewById(R.id.dp);
+                    ImageManager newImage = new ImageManager(uri, image);
+                    newImage.location = location.getText().toString();
+                    newImage.description = caption.getText().toString();
+                    newImage.title = title.getText().toString();
+
+                    int day = dp.getDayOfMonth();
+                    int month = dp.getMonth();
+                    int year =  dp.getYear();
+
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(year, month, day);
+
+                    newImage.date = calendar.getTime();
+
+                    images.add(newImage);
+
+                    Intent intent = new Intent(photoview, MainActivity.class);
+                    startActivity(intent);
+
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
 //                try {
 //                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
 //                  images.addImage(bitmap);
@@ -87,6 +121,7 @@ public class PhotoEditorActivity extends AppCompatActivity {
         return true;
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

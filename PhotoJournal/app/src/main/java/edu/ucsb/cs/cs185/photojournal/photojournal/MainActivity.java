@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public static ArrayList<ImageManager> images = new ArrayList<>();
     public static boolean inListView = true;
+    public static boolean loggedIn = false;
 
 
     @Override
@@ -35,8 +36,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_layout);
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        if(!loggedIn) {
+            loggedIn = true;
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
