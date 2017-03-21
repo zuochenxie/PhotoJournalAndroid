@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }

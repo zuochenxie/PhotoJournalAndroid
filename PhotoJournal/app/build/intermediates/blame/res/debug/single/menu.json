@@ -1,13 +1,5 @@
 [
     {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/src/main/res/menu/menu_main.xml"
-    },
-    {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/menu/photo_menu.xml",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/src/main/res/menu/photo_menu.xml"
-    },
-    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/menu/menu_main.xml"
     },

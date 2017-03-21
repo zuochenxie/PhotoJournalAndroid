@@ -59,6 +59,25 @@
         android:paddingRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/location"
+        android:text="Location"
+        android:textColor="#999999"/>
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/entryLocation"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/date"
         android:text="Date"
         android:textColor="#999999"/>

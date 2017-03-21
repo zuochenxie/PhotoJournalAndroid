@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action_tombstone.xml"
-    },
-    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_custom_big.xml"
     },
@@ -16,19 +12,7 @@
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_icon_group.xml"
-    },
-    {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action.xml"
-    },
-    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action.xml"
-    },
-    {
-        "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_custom_big.xml"
     }
 ]

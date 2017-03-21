@@ -21,6 +21,7 @@ public class PhotoViewActivity extends AppCompatActivity{
     TextView title;
     TextView description;
     TextView date;
+    TextView location;
     public int imgIndex;
 
     @Override
@@ -34,11 +35,13 @@ public class PhotoViewActivity extends AppCompatActivity{
         title = (TextView)findViewById(R.id.entryTitle);
         description = (TextView)findViewById(R.id.entryDescription);
         date = (TextView)findViewById(R.id.entryDate);
+        location = (TextView)findViewById(R.id.entryLocation);
 
         Bitmap img = images.get(imgIndex).bitmap;
         image.setImageBitmap(img);
         title.setText(images.get(imgIndex).title);
         description.setText(images.get(imgIndex).description);
+        location.setText(images.get(imgIndex).location);
 
         Format formatter = new SimpleDateFormat("MM/dd/yyyy");
         String s = formatter.format(images.get(imgIndex).date);
