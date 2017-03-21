@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.Date;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,7 +29,7 @@ public class DayFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     public DayAdapter dAdapter;
-    public static int today;
+    public static int today=(new Date()).getDate();
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -77,8 +79,36 @@ public class DayFragment extends Fragment {
         JournalManager.dAdapter = dAdapter;
         TextView textView = (TextView)rootView.findViewById(R.id.title_day);
         textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
-        TextView left = (TextView)rootView.findViewById(R.id.leftArrow);
-        TextView right = (TextView)rootView.findViewById(R.id.rightArrow);
+        TextView left = (TextView)rootView.findViewById(R.id.leftArrow2);
+        left.setText("<");
+        TextView right = (TextView)rootView.findViewById(R.id.rightArrow2);
+        right.setText(">");
+        left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int lastDay = today;
+                while(lastDay!=1){
+                    lastDay--;
+                    if(JournalManager.dateMap.get(lastDay)!=null){
+                        today=lastDay;
+                        dAdapter.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
+        right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int lastDay = today;
+                while(lastDay!=32){
+                    lastDay++;
+                    if(JournalManager.dateMap.get(lastDay)!=null){
+                        today=lastDay;
+                        dAdapter.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
 
         GridView gridView = (GridView)rootView.findViewById(R.id.gridView2);
         gridView.setAdapter(dAdapter);

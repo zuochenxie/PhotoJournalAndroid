@@ -27,7 +27,6 @@ public class JournalAdapter extends BaseAdapter {
 
     }
 
-
     @Override
     public int getCount() {
         return JournalManager.dateMap.size();
@@ -61,6 +60,7 @@ public class JournalAdapter extends BaseAdapter {
         TextView imgDate = (TextView)convertView.findViewById(R.id.image_date);
         if (imgDate!= null) {
             imgDate.setText(item.date.getDate()+"");
+            imgDate.setAlpha(1f);
         }
 
         return convertView;

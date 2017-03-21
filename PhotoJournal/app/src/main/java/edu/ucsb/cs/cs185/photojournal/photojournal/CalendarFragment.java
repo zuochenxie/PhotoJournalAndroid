@@ -12,6 +12,10 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.TreeMap;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,8 +33,8 @@ public class CalendarFragment extends Fragment {
 
     public JournalAdapter jAdapter;
 
-    public static int currentYear = 117;
-    public static int currentMonth = 2;
+    public static int currentYear = (new Date()).getYear();
+    public static int currentMonth = (new Date()).getMonth();
     public static String[] months={"January","February","March","April","May","June","July","August",
             "September","October","November","December"};
 
@@ -93,13 +97,47 @@ public class CalendarFragment extends Fragment {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int lastMonth = currentMonth;
+                int lastYear = currentYear;
+                TreeMap<Integer, ArrayList<JournalManager.Journal>> lMap;
+                while(lastYear!=100||lastMonth!=0){
+                    lastMonth--;
+                    if(lastMonth<0){
+                        lastYear--;
+                        lastMonth=11;
+                    }
+                    lMap = JournalManager.getJournalsInMonth(lastYear,lastMonth);
+                    if(lMap.size()>0){
+                        JournalManager.dateMap = lMap;
+                        currentMonth = lastMonth;
+                        currentYear = lastYear;
+                        jAdapter.notifyDataSetChanged();
+                        break;
+                    }
+                }
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int nextMonth = currentMonth;
+                int nextYear = currentYear;
+                TreeMap<Integer, ArrayList<JournalManager.Journal>> lMap;
+                while(nextYear!=(new Date()).getYear()||nextMonth!=(new Date()).getYear()){
+                    nextMonth++;
+                    if(nextMonth>11){
+                        nextYear++;
+                        nextMonth=0;
+                    }
+                    lMap = JournalManager.getJournalsInMonth(nextYear,nextMonth);
+                    if(lMap.size()>0){
+                        JournalManager.dateMap = lMap;
+                        currentMonth = nextMonth;
+                        currentYear = nextYear;
+                        jAdapter.notifyDataSetChanged();
+                        break;
+                    }
+                }
             }
         });
 

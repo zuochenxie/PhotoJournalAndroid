@@ -48,6 +48,7 @@ public class DayAdapter extends BaseAdapter {
         TextView imgDate = (TextView)convertView.findViewById(R.id.image_date);
         if (imgDate!= null) {
             imgDate.setText("");
+            imgDate.setAlpha(0f);
         }
 
         return convertView;
