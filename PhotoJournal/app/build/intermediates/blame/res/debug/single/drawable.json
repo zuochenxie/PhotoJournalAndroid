@@ -12,10 +12,6 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/drawable/design_bottom_navigation_item_background.xml"
-    },
-    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/drawable/design_snackbar_background.xml"
     },
@@ -36,12 +32,12 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_textfield_search_material.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/logo_white.png",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/drawable/logo_white.png"
+    },
+    {
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
@@ -58,10 +54,6 @@
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
@@ -100,10 +92,6 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable/abc_edit_text_material.xml"
-    },
-    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_switch_thumb_material.xml"
     },
@@ -114,10 +102,6 @@
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/drawable/design_password_eye.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
