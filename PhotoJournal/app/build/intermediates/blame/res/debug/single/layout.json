@@ -44,12 +44,12 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_alert_dialog_material.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/fragment_day.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/fragment_day.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_action_tombstone.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
@@ -160,16 +160,8 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_icon_group.xml"
-    },
-    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_action_menu_layout.xml"
-    },
-    {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_custom_big.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
@@ -196,10 +188,6 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/fragment_blank.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/fragment_blank.xml"
-    },
-    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_menu.xml"
     },
@@ -220,8 +208,8 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
-        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_action.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/grid_item.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/grid_item.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
@@ -234,5 +222,9 @@
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/fragment_calendar.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/fragment_calendar.xml"
     }
 ]

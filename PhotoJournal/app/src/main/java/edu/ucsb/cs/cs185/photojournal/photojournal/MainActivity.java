@@ -1,16 +1,21 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int PICK_IMAGE_REQUEST = 9876;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +32,30 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent imgPickingIntent = new Intent();
+                imgPickingIntent.setType("image/*");
+                imgPickingIntent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(imgPickingIntent, PICK_IMAGE_REQUEST);
+
             }
         });
+
+        CalendarFragment cFragment = new CalendarFragment();
+        getFragmentManager().beginTransaction().replace(R.id.content_main, cFragment).commit();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        try{
+            Uri uri = data.getData();
+            Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+            JournalManager.Journal journal = new JournalManager.Journal(image);
+            JournalManager.addItem(journal);
+            //Log.d("MainActivity", "onActivityResult: image selected");
+        } catch (Exception e){
+            Log.e("onActivityResult", e.toString());
+        }
     }
 
     @Override
