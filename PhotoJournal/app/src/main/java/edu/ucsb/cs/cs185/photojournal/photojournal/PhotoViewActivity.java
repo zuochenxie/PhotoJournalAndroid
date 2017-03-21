@@ -79,6 +79,12 @@ public class PhotoViewActivity extends AppCompatActivity{
                     date.setText(s);
                 }
             }
+
+            public void onSwipeTop() {
+            }
+            public void onSwipeBottom() {
+            }
+
         });
     }
 
