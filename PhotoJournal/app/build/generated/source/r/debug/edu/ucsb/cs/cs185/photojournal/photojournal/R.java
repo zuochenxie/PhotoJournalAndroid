@@ -2690,7 +2690,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d0061;
         public static final int action_mode_bar_stub=0x7f0d0060;
         public static final int action_mode_close_button=0x7f0d0043;
-        public static final int action_settings=0x7f0d00bb;
+        public static final int action_settings=0x7f0d00bd;
         public static final int action_text=0x7f0d009a;
         public static final int actions=0x7f0d00a7;
         public static final int activityImage=0x7f0d00b1;
@@ -2721,7 +2721,7 @@ containing a value of this type.
         public static final int date=0x7f0d00b7;
         public static final int decor_content_parent=0x7f0d0062;
         public static final int default_activity_button=0x7f0d0047;
-        public static final int delete_photo=0x7f0d00bd;
+        public static final int delete_photo=0x7f0d00bf;
         public static final int description=0x7f0d00b3;
         public static final int design_bottom_sheet=0x7f0d0081;
         public static final int design_menu_item_action_area=0x7f0d0088;
@@ -2729,7 +2729,7 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0d0086;
         public static final int design_navigation_view=0x7f0d0085;
         public static final int disableHome=0x7f0d0012;
-        public static final int edit_photo=0x7f0d00bc;
+        public static final int edit_photo=0x7f0d00be;
         public static final int edit_query=0x7f0d0066;
         public static final int end=0x7f0d002a;
         public static final int end_padder=0x7f0d00ae;
@@ -2743,6 +2743,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f0d0045;
         public static final int expanded_menu=0x7f0d005a;
         public static final int fab=0x7f0d0078;
+        public static final int fb_button=0x7f0d00b9;
         public static final int fill=0x7f0d0034;
         public static final int fill_horizontal=0x7f0d0035;
         public static final int fill_vertical=0x7f0d002b;
@@ -2777,7 +2778,7 @@ containing a value of this type.
         public static final int list_img=0x7f0d0095;
         public static final int list_item=0x7f0d0048;
         public static final int location=0x7f0d00b5;
-        public static final int masked=0x7f0d00ba;
+        public static final int masked=0x7f0d00bc;
         public static final int media_actions=0x7f0d009e;
         public static final int middle=0x7f0d0039;
         public static final int mini=0x7f0d0037;
@@ -2857,10 +2858,11 @@ containing a value of this type.
         public static final int touch_outside=0x7f0d0080;
         public static final int transition_current_scene=0x7f0d000b;
         public static final int transition_scene_layoutid_cache=0x7f0d000c;
+        public static final int twitter_button=0x7f0d00ba;
         public static final int up=0x7f0d000d;
         public static final int useLogo=0x7f0d0018;
         public static final int view_offset_helper=0x7f0d000e;
-        public static final int visible=0x7f0d00b9;
+        public static final int visible=0x7f0d00bb;
         public static final int withText=0x7f0d003e;
         public static final int wrap_content=0x7f0d0024;
     }

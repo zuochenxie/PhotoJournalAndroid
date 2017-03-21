@@ -20,7 +20,10 @@ public class ImageManager {
     public ImageManager(Uri uri, Bitmap bitmap){
         this.uri = uri;
         this.bitmap = bitmap;
-
+        this.title = "";
+        this.description = "";
+        this.location = "";
+        this.date = new Date();
     }
 
     public void setInfo(String title, String description, String location, Date date){
