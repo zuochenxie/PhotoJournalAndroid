@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by joesong on 3/18/17.
@@ -46,6 +48,42 @@ public class PhotoViewActivity extends AppCompatActivity{
         Format formatter = new SimpleDateFormat("MM/dd/yyyy");
         String s = formatter.format(images.get(imgIndex).date);
         date.setText(s);
+
+        ScrollView view = (ScrollView) findViewById(R.id.photo_view_scroll);
+        view.setOnTouchListener(new OnSwipeTouchListener(PhotoViewActivity.this){
+            public void onSwipeRight() {
+                if(imgIndex < images.size()-1) {
+                    imgIndex += 1;
+                    Bitmap img = images.get(imgIndex).bitmap;
+                    image.setImageBitmap(img);
+                    title.setText(images.get(imgIndex).title);
+                    description.setText(images.get(imgIndex).description);
+                    location.setText(images.get(imgIndex).location);
+
+                    Format formatter = new SimpleDateFormat("MM/dd/yyyy");
+                    String s = formatter.format(images.get(imgIndex).date);
+                    date.setText(s);
+                }
+            }
+            public void onSwipeLeft() {
+                if(imgIndex>0) {
+                    imgIndex -= 1;
+                    Bitmap img = images.get(imgIndex).bitmap;
+                    image.setImageBitmap(img);
+                    title.setText(images.get(imgIndex).title);
+                    description.setText(images.get(imgIndex).description);
+                    location.setText(images.get(imgIndex).location);
+
+                    Format formatter = new SimpleDateFormat("MM/dd/yyyy");
+                    String s = formatter.format(images.get(imgIndex).date);
+                    date.setText(s);
+                }
+            }
+        });
     }
+
+
+
+
 
 }
