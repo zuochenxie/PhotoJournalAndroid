@@ -17,32 +17,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="title"
-        android:ems="10"
-        android:layout_marginTop="85dp"
-        android:id="@+id/photo_title"
-        android:layout_below="@+id/photo_uploader_btn"
-        android:layout_centerHorizontal="true" />
-
-    <DatePicker
-        android:id="@+id/dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
-        android:layout_below="@+id/photo_location"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="location"
+        android:hint="caption"
         android:ems="10"
         android:layout_marginTop="32dp"
         android:id="@+id/photo_location"
-        android:layout_below="@+id/photo_caption"
-        android:layout_alignStart="@+id/photo_caption" />
+        android:layout_below="@+id/photo_location"
+        android:layout_alignStart="@+id/photo_location" />
 
     <Button
         android:layout_width="@dimen/box_size"
@@ -59,10 +39,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="caption"
+        android:hint="location"
         android:ems="10"
         android:layout_marginTop="28dp"
-        android:id="@+id/photo_caption"
+        android:id="@+id/photo_location"
         android:layout_below="@+id/photo_title"
         android:layout_alignStart="@+id/photo_title" />
 
@@ -75,14 +55,34 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="title"
+        android:ems="10"
+        android:layout_marginTop="39dp"
+        android:id="@+id/photo_title"
+        android:layout_below="@+id/photo_uploader_btn"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:text="Upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
         android:id="@+id/photo_upload_btn"
         android:layout_below="@+id/dp"
-        android:layout_alignStart="@+id/photo_location"
-        android:layout_alignEnd="@+id/photo_location" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+    <DatePicker
+        android:id="@+id/dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/photo_location"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

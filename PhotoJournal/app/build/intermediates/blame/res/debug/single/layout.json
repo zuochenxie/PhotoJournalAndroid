@@ -44,16 +44,16 @@
         "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item.xml"
     },
     {
         "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
         "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item.xml"
+        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
@@ -64,20 +64,20 @@
         "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_bottom_navigation_item.xml"
     },
     {
-        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
-        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item_header.xml"
-    },
-    {
         "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/activity_photo_editor.xml",
         "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/src/main/res/layout/activity_photo_editor.xml"
     },
     {
-        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item_subheader.xml"
+        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item_header.xml"
     },
     {
         "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "/Users/Melvine/Development/AndroidStudioProjects/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",

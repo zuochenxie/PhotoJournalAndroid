@@ -34,8 +34,14 @@ public class PhotoEditorActivity extends AppCompatActivity {
         setTitle("Upload a Photo");
 
         Calendar calMax = Calendar.getInstance();
+        Calendar calMin = Calendar.getInstance();
+        calMin.add(Calendar.YEAR,-17);
+
+        long calMinMilli = calMin.getTimeInMillis();
         long calMaxMilli = calMax.getTimeInMillis();
+
         final DatePicker dp =  (DatePicker)this.findViewById(R.id.dp);
+        dp.setMinDate(calMinMilli);
         dp.setMaxDate(calMaxMilli);
 
         Button import_photo = (Button) findViewById(R.id.photo_uploader_btn);
