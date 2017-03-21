@@ -27,6 +27,10 @@
         <activity
             android:name="edu.ucsb.cs.cs185.photojournal.photojournal.LoginActivity"
             android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="edu.ucsb.cs.cs185.photojournal.photojournal.PhotoEditorActivity"
+            android:label="@string/title_activity_photo_editor"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

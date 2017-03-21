@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.photo_editor) {
-            Fragment fragment = new PhotoEditorFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+            Intent intent = new Intent(this, PhotoEditorActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

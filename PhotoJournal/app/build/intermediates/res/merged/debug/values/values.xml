@@ -469,7 +469,7 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="box_size">50dp</dimen>
+    <dimen name="box_size">100dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -606,6 +606,7 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_photo_editor">PhotoEditorActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -615,29 +616,29 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-    
-</style>
+        
+    </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
-    <item name="colorPrimary">@color/primary</item>
-    <item name="colorPrimaryDark">@color/primary_dark</item>
-    <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
 
-    <item name="android:windowBackground">@color/primary</item>
+        <item name="android:windowBackground">@color/primary</item>
 
-    <item name="colorControlNormal">@color/light_gray</item>
-    <item name="colorControlActivated">@color/white</item>
-    <item name="colorControlHighlight">@color/white</item>
-    <item name="android:textColorHint">@color/light_gray</item>
+        <item name="colorControlNormal">@color/light_gray</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/light_gray</item>
 
-    <item name="colorButtonNormal">@color/primary_dark</item>
-    <item name="android:colorButtonNormal">@color/primary_dark</item>
-</style>
+        <item name="colorButtonNormal">@color/primary_dark</item>
+        <item name="android:colorButtonNormal">@color/primary_dark</item>
+    </style>
     <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
-    <item name="colorAccent">@color/white</item>
-    <item name="android:textColorPrimary">@color/light_gray</item>
-    <item name="android:background">@color/primary</item>
-</style>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/light_gray</item>
+        <item name="android:background">@color/primary</item>
+    </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
