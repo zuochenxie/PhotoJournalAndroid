@@ -5,18 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.images;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.ITEMS;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.Journal;
 
 /**
  * Created by joesong on 3/18/17.
  */
 
 public class ListFragment extends Fragment{
-    public ImageAdapter adapter;
+    public static ImageAdapter adapter;
 
     public ListFragment(){
 
@@ -38,7 +39,7 @@ public class ListFragment extends Fragment{
         View rootView = inflater.inflate(R.layout.list_fragment, container, false);
 
         final ListView imageView = (ListView) rootView.findViewById(R.id.image_list);
-        adapter = new ImageAdapter(getActivity().getApplicationContext(), images);
+        adapter = new ImageAdapter(getActivity().getApplicationContext(), ITEMS);
         imageView.setAdapter(adapter);
 
         imageView.setOnItemClickListener(new AdapterView.OnItemClickListener(){

@@ -727,7 +727,7 @@ int id auto 0x7f0d0025
 int id beginning 0x7f0d0038
 int id bottom 0x7f0d0026
 int id btn_login 0x7f0d0075
-int id btn_signup 0x7f0d007a
+int id btn_signup 0x7f0d0079
 int id buttonPanel 0x7f0d004b
 int id cancel_action 0x7f0d00a6
 int id center 0x7f0d0027
@@ -739,7 +739,7 @@ int id clip_horizontal 0x7f0d0032
 int id clip_vertical 0x7f0d0033
 int id collapseActionView 0x7f0d003b
 int id contentPanel 0x7f0d004e
-int id content_main 0x7f0d007c
+int id content_main 0x7f0d007b
 int id content_photo_editor 0x7f0d007e
 int id custom 0x7f0d0055
 int id customPanel 0x7f0d0054
@@ -769,7 +769,6 @@ int id entryTitle 0x7f0d00bc
 int id exitUntilCollapsed 0x7f0d001b
 int id expand_activities_button 0x7f0d0045
 int id expanded_menu 0x7f0d005a
-int id fab 0x7f0d0078
 int id fb_button 0x7f0d00c3
 int id fill 0x7f0d0034
 int id fill_horizontal 0x7f0d0035
@@ -791,7 +790,7 @@ int id img_date 0x7f0d00a0
 int id img_location 0x7f0d00a1
 int id info 0x7f0d00af
 int id input_email 0x7f0d0073
-int id input_name 0x7f0d0079
+int id input_name 0x7f0d0078
 int id input_password 0x7f0d0074
 int id item_touch_helper_previous_elevation 0x7f0d0005
 int id largeLabel 0x7f0d0087
@@ -800,7 +799,7 @@ int id leftArrow 0x7f0d0094
 int id leftArrow2 0x7f0d0098
 int id line1 0x7f0d00b4
 int id line3 0x7f0d00b6
-int id link_login 0x7f0d007b
+int id link_login 0x7f0d007a
 int id link_signup 0x7f0d0076
 int id listMode 0x7f0d000f
 int id list_img 0x7f0d009f
@@ -899,6 +898,7 @@ int id transition_current_scene 0x7f0d000b
 int id transition_scene_layoutid_cache 0x7f0d000c
 int id twitter_button 0x7f0d00c4
 int id up 0x7f0d000d
+int id upload 0x7f0d007c
 int id useLogo 0x7f0d0018
 int id view_offset_helper 0x7f0d000e
 int id visible 0x7f0d00c5

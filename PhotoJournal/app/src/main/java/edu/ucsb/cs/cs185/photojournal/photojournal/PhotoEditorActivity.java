@@ -21,7 +21,8 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
-import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.images;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.ITEMS;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.Journal;
 
 public class PhotoEditorActivity extends AppCompatActivity {
     private int PICK_IMAGE_REQUEST = 1;
@@ -77,7 +78,7 @@ public class PhotoEditorActivity extends AppCompatActivity {
                     EditText caption = (EditText) findViewById(R.id.photo_caption);
                     EditText title = (EditText) findViewById(R.id.photo_title);
                     DatePicker date = (DatePicker) findViewById(R.id.dp);
-                    ImageManager newImage = new ImageManager(uri, image);
+                    Journal newImage = new Journal(uri, image);
                     newImage.location = location.getText().toString();
                     newImage.description = caption.getText().toString();
                     newImage.title = title.getText().toString();
@@ -91,10 +92,12 @@ public class PhotoEditorActivity extends AppCompatActivity {
 
                     newImage.date = calendar.getTime();
 
-                    images.add(newImage);
-
+                    JournalManager.addItem(newImage);
+                    /*
                     Intent intent = new Intent(photoview, MainActivity.class);
                     startActivity(intent);
+                    */
+                    photoview.finish();
 
                 } catch (IOException e){
                     e.printStackTrace();

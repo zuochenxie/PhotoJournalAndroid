@@ -1,6 +1,7 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -116,6 +117,10 @@ public class DayFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // go to imageViewActivity
+                Intent intent = new Intent(getActivity(), PhotoViewActivity.class);
+                intent.putExtra("date", true);
+                intent.putExtra("pos", position);
+                startActivity(intent);
             }
         });
 
@@ -142,6 +147,7 @@ public class DayFragment extends Fragment {
         }
     }
 */
+
     @Override
     public void onDetach() {
         super.onDetach();

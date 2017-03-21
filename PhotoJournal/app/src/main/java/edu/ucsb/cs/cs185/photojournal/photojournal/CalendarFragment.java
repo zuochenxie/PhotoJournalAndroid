@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -84,7 +85,7 @@ public class CalendarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
         jAdapter = new JournalAdapter(getContext());
         JournalManager.jAdapter = jAdapter;
         TextView textView = (TextView)rootView.findViewById(R.id.textView);
@@ -147,8 +148,10 @@ public class CalendarFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // go to DayFragment
+                rootView.setVisibility(View.INVISIBLE);
                 DayFragment dFragment = new DayFragment(((JournalManager.Journal)jAdapter.getItem(position)).date.getDate());
-                getFragmentManager().beginTransaction().replace(R.id.content_main, dFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, dFragment).commit();
+                MainActivity.inDayView=true;
             }
         });
 

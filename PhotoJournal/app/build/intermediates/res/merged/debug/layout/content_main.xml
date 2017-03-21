@@ -18,7 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-        android:text="Add your first photo!" />
+        android:text="Add your first photo!"
+        android:id="@+id/upload"/>
 
     <FrameLayout
         android:id="@+id/fragment_container"

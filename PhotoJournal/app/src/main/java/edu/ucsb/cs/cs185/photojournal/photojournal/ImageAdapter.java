@@ -16,21 +16,23 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.images;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.ITEMS;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.Journal;
 
 /**
  * Created by joesong on 3/18/17.
  */
 
-public class ImageAdapter extends ArrayAdapter<ImageManager>{
-    private ArrayList<ImageManager> images;
+public class ImageAdapter extends ArrayAdapter<Journal>{
+    private ArrayList<Journal> images;
 
-    public ImageAdapter(Context context, ArrayList<ImageManager> images){
+    public ImageAdapter(Context context, ArrayList<Journal> images){
         super(context, 0, images);
         this.images = images;
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
-        ImageManager image = getItem(position);
+        Journal image = ITEMS.get(position);
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_image, parent, false);
         }
@@ -56,7 +58,7 @@ public class ImageAdapter extends ArrayAdapter<ImageManager>{
     }
 
     @Override
-    public ImageManager getItem(int position){
+    public Journal getItem(int position){
         return images.get(position);
     }
 

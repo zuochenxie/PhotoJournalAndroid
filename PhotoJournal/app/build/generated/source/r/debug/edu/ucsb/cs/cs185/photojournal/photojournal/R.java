@@ -2705,7 +2705,7 @@ containing a value of this type.
         public static final int beginning=0x7f0d0038;
         public static final int bottom=0x7f0d0026;
         public static final int btn_login=0x7f0d0075;
-        public static final int btn_signup=0x7f0d007a;
+        public static final int btn_signup=0x7f0d0079;
         public static final int buttonPanel=0x7f0d004b;
         public static final int cancel_action=0x7f0d00a6;
         public static final int center=0x7f0d0027;
@@ -2717,7 +2717,7 @@ containing a value of this type.
         public static final int clip_vertical=0x7f0d0033;
         public static final int collapseActionView=0x7f0d003b;
         public static final int contentPanel=0x7f0d004e;
-        public static final int content_main=0x7f0d007c;
+        public static final int content_main=0x7f0d007b;
         public static final int content_photo_editor=0x7f0d007e;
         public static final int custom=0x7f0d0055;
         public static final int customPanel=0x7f0d0054;
@@ -2747,7 +2747,6 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0d001b;
         public static final int expand_activities_button=0x7f0d0045;
         public static final int expanded_menu=0x7f0d005a;
-        public static final int fab=0x7f0d0078;
         public static final int fb_button=0x7f0d00c3;
         public static final int fill=0x7f0d0034;
         public static final int fill_horizontal=0x7f0d0035;
@@ -2769,7 +2768,7 @@ containing a value of this type.
         public static final int img_location=0x7f0d00a1;
         public static final int info=0x7f0d00af;
         public static final int input_email=0x7f0d0073;
-        public static final int input_name=0x7f0d0079;
+        public static final int input_name=0x7f0d0078;
         public static final int input_password=0x7f0d0074;
         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
         public static final int largeLabel=0x7f0d0087;
@@ -2778,7 +2777,7 @@ containing a value of this type.
         public static final int leftArrow2=0x7f0d0098;
         public static final int line1=0x7f0d00b4;
         public static final int line3=0x7f0d00b6;
-        public static final int link_login=0x7f0d007b;
+        public static final int link_login=0x7f0d007a;
         public static final int link_signup=0x7f0d0076;
         public static final int listMode=0x7f0d000f;
         public static final int list_img=0x7f0d009f;
@@ -2877,6 +2876,7 @@ containing a value of this type.
         public static final int transition_scene_layoutid_cache=0x7f0d000c;
         public static final int twitter_button=0x7f0d00c4;
         public static final int up=0x7f0d000d;
+        public static final int upload=0x7f0d007c;
         public static final int useLogo=0x7f0d0018;
         public static final int view_offset_helper=0x7f0d000e;
         public static final int visible=0x7f0d00c5;
