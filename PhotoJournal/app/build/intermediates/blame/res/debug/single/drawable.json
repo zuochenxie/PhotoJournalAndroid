@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/notification_icon_background.xml"
-    },
-    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_ic_ab_back_material.xml"
     },
     {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/logo_white.png",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/drawable/logo_white.png"
+    },
+    {
+        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
@@ -84,16 +84,16 @@
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/twitter_logo.png",
+        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/drawable/twitter_logo.png"
+    },
+    {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
         "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/drawable/abc_vector_test.xml"
-    },
-    {
-        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/twitter_logo.png",
-        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/src/main/res/drawable/twitter_logo.png"
     },
     {
         "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
