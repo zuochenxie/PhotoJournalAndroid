@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action.xml"
     },
     {
-        "merged": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/joesong/Desktop/blah/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action_tombstone.xml"
     }
 ]
