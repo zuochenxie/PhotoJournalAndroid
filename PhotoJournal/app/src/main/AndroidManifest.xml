@@ -21,6 +21,11 @@
         <activity android:name=".LoginActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name=".SignUpActivity" android:theme="@style/AppTheme.Light" />
         <activity android:name=".PhotoViewActivity"/>
+        <activity
+            android:name=".PhotoEditorActivity"
+            android:label="@string/title_activity_photo_editor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
 
     </application>
 
