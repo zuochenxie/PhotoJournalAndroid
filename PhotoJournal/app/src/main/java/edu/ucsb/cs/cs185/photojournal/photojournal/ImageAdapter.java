@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -39,6 +41,9 @@ public class ImageAdapter extends ArrayAdapter<ImageManager>{
         Format formatter = new SimpleDateFormat("MM/dd/yyyy");
         String s = formatter.format(image.date);
         date.setText(s);
+
+        TextView location = (TextView) convertView.findViewById(R.id.img_location);
+        location.setText(image.location);
 
 
 
