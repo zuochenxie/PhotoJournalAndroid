@@ -2,5 +2,9 @@
     {
         "merged": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/zuochenxie/Documents/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/joesong/Desktop/PhotoJournalAndroid/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     }
 ]
