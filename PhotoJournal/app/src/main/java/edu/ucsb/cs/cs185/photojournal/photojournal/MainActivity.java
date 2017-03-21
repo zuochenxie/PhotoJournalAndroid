@@ -6,8 +6,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -19,15 +23,17 @@ import android.content.Intent;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final int PICK_IMAGE_REQUEST = 9876;
 
     public static ArrayList<ImageManager> images = new ArrayList<>();
+    public static boolean inListView = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.drawer_layout);
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
@@ -75,6 +81,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         Fragment listFrag = new ListFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, listFrag).commit();
     }
@@ -114,5 +129,41 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (!inListView && id == R.id.list_view) {
+            inListView = true;
+            /*
+            if(listFragment==null){
+                listFragment = new ListFragment();
+            }
+            getFragmentManager().beginTransaction().replace(R.id.viewContainer, listFragment).commit();
+            */
+            //Log.d("LIST","going to list view");
+        }
+        else if (inListView && id == R.id.grid_view) {
+            inListView = false;
+            /*
+            if(gridFragment==null){
+                gridFragment = new GridFragment();
+            }
+            getFragmentManager().beginTransaction().replace(R.id.viewContainer, gridFragment).commit();
+            */
+            //Log.d("GRID","going to grid view");
+        }
+        else if (id==R.id.logout){
+            Intent intent = new Intent(this, LoginActivity.class);
+            this.startActivity(intent);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
