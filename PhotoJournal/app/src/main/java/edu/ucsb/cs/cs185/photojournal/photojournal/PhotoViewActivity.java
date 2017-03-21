@@ -52,10 +52,32 @@ public class PhotoViewActivity extends AppCompatActivity{
         ScrollView view = (ScrollView) findViewById(R.id.photo_view_scroll);
         view.setOnTouchListener(new OnSwipeTouchListener(PhotoViewActivity.this){
             public void onSwipeRight() {
-                Toast.makeText(PhotoViewActivity.this, "right", Toast.LENGTH_SHORT).show();
+                if(imgIndex < images.size()-1) {
+                    imgIndex += 1;
+                    Bitmap img = images.get(imgIndex).bitmap;
+                    image.setImageBitmap(img);
+                    title.setText(images.get(imgIndex).title);
+                    description.setText(images.get(imgIndex).description);
+                    location.setText(images.get(imgIndex).location);
+
+                    Format formatter = new SimpleDateFormat("MM/dd/yyyy");
+                    String s = formatter.format(images.get(imgIndex).date);
+                    date.setText(s);
+                }
             }
             public void onSwipeLeft() {
-                Toast.makeText(PhotoViewActivity.this, "left", Toast.LENGTH_SHORT).show();
+                if(imgIndex>0) {
+                    imgIndex -= 1;
+                    Bitmap img = images.get(imgIndex).bitmap;
+                    image.setImageBitmap(img);
+                    title.setText(images.get(imgIndex).title);
+                    description.setText(images.get(imgIndex).description);
+                    location.setText(images.get(imgIndex).location);
+
+                    Format formatter = new SimpleDateFormat("MM/dd/yyyy");
+                    String s = formatter.format(images.get(imgIndex).date);
+                    date.setText(s);
+                }
             }
         });
     }
