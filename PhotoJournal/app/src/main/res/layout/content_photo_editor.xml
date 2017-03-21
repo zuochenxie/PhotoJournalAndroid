@@ -28,7 +28,6 @@
         android:layout_width="@dimen/box_size"
         android:layout_height="@dimen/box_size"
         android:id="@+id/photo_uploader_btn"
-        android:background="@drawable/plus_math"
         android:layout_marginTop="68dp"
         android:alpha="1"
         android:elevation="7dp"
