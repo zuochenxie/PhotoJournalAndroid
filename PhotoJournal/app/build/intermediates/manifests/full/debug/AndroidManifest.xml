@@ -29,7 +29,7 @@
             android:theme="@style/AppTheme.Dark" />
         <activity
             android:name="edu.ucsb.cs.cs185.photojournal.photojournal.SignUpActivity"
-            android:theme="@style/AppTheme.Dark" />
+            android:theme="@style/AppTheme.Light" />
         <activity android:name="edu.ucsb.cs.cs185.photojournal.photojournal.PhotoViewActivity" />
     </application>
 
