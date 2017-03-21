@@ -1,11 +1,13 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -14,8 +16,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 9876;
+
+    public static ArrayList<ImageManager> images = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
+            /*
             public void onClick(View view) {
                 Intent imgPickingIntent = new Intent();
                 imgPickingIntent.setType("image/*");
@@ -56,6 +65,18 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e){
             Log.e("onActivityResult", e.toString());
         }
+        */
+
+            public void onClick(View view){
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+            }
+        });
+
+        Fragment listFrag = new ListFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, listFrag).commit();
     }
 
     @Override
@@ -63,6 +84,21 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent){
+        super.onActivityResult(requestCode,resultCode,intent);
+        if (requestCode == PICK_IMAGE_REQUEST) {
+            // came back from second activity
+            Uri uri = intent.getData();
+            try{
+                Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                images.add(new ImageManager(uri, image));
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override

@@ -152,6 +152,10 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/layout/design_bottom_navigation_item.xml"
     },
     {
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/photo_view.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/photo_view.xml"
+    },
+    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_action_mode_bar.xml"
     },
@@ -184,6 +188,10 @@
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/list_image.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/list_image.xml"
+    },
+    {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout/select_dialog_item_material.xml"
     },
@@ -210,6 +218,10 @@
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/grid_item.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/grid_item.xml"
+    },
+    {
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/list_fragment.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/layout/list_fragment.xml"
     },
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",

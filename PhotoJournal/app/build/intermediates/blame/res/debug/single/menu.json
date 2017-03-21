@@ -2,5 +2,9 @@
     {
         "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/build/intermediates/res/merged/debug/menu/photo_menu.xml",
+        "source": "/Users/rexluan/Desktop/cs185/project/PhotoJournal/app/src/main/res/menu/photo_menu.xml"
     }
 ]
