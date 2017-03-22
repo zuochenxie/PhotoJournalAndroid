@@ -16,7 +16,8 @@ import android.widget.Toast;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 
-import static edu.ucsb.cs.cs185.photojournal.photojournal.MainActivity.images;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.ITEMS;
+import static edu.ucsb.cs.cs185.photojournal.photojournal.JournalManager.Journal;
 
 public class PhotoViewActivity extends AppCompatActivity{
     ImageView image;
@@ -32,6 +33,9 @@ public class PhotoViewActivity extends AppCompatActivity{
         setContentView(R.layout.photo_view);
 
         imgIndex = getIntent().getExtras().getInt("INDEX");
+        boolean d = getIntent().getExtras().getBoolean("date");
+        int pos = getIntent().getExtras().getInt("pos");
+
 
         image = (ImageView)findViewById(R.id.activityImage);
         title = (TextView)findViewById(R.id.entryTitle);
@@ -39,43 +43,50 @@ public class PhotoViewActivity extends AppCompatActivity{
         date = (TextView)findViewById(R.id.entryDate);
         location = (TextView)findViewById(R.id.entryLocation);
 
-        Bitmap img = images.get(imgIndex).bitmap;
+        Journal journal;
+        if(d){
+            journal=JournalManager.dateMap.get(DayFragment.today).get(pos);
+        }
+        else{
+            journal=ITEMS.get(imgIndex);
+        }
+        Bitmap img = journal.bitmap;
         image.setImageBitmap(img);
-        title.setText(images.get(imgIndex).title);
-        description.setText(images.get(imgIndex).description);
-        location.setText(images.get(imgIndex).location);
+        title.setText(journal.title);
+        description.setText(journal.description);
+        location.setText(journal.location);
 
         Format formatter = new SimpleDateFormat("MM/dd/yyyy");
-        String s = formatter.format(images.get(imgIndex).date);
+        String s = formatter.format(journal.date);
         date.setText(s);
 
         ScrollView view = (ScrollView) findViewById(R.id.photo_view_scroll);
         view.setOnTouchListener(new OnSwipeTouchListener(PhotoViewActivity.this){
             public void onSwipeRight() {
-                if(imgIndex < images.size()-1) {
+                if(imgIndex < ITEMS.size()-1) {
                     imgIndex += 1;
-                    Bitmap img = images.get(imgIndex).bitmap;
+                    Bitmap img = ITEMS.get(imgIndex).bitmap;
                     image.setImageBitmap(img);
-                    title.setText(images.get(imgIndex).title);
-                    description.setText(images.get(imgIndex).description);
-                    location.setText(images.get(imgIndex).location);
+                    title.setText(ITEMS.get(imgIndex).title);
+                    description.setText(ITEMS.get(imgIndex).description);
+                    location.setText(ITEMS.get(imgIndex).location);
 
                     Format formatter = new SimpleDateFormat("MM/dd/yyyy");
-                    String s = formatter.format(images.get(imgIndex).date);
+                    String s = formatter.format(ITEMS.get(imgIndex).date);
                     date.setText(s);
                 }
             }
             public void onSwipeLeft() {
                 if(imgIndex>0) {
                     imgIndex -= 1;
-                    Bitmap img = images.get(imgIndex).bitmap;
+                    Bitmap img = ITEMS.get(imgIndex).bitmap;
                     image.setImageBitmap(img);
-                    title.setText(images.get(imgIndex).title);
-                    description.setText(images.get(imgIndex).description);
-                    location.setText(images.get(imgIndex).location);
+                    title.setText(ITEMS.get(imgIndex).title);
+                    description.setText(ITEMS.get(imgIndex).description);
+                    location.setText(ITEMS.get(imgIndex).location);
 
                     Format formatter = new SimpleDateFormat("MM/dd/yyyy");
-                    String s = formatter.format(images.get(imgIndex).date);
+                    String s = formatter.format(ITEMS.get(imgIndex).date);
                     date.setText(s);
                 }
             }

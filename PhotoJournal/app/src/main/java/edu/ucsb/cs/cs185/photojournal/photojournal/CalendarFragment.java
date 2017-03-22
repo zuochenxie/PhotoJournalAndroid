@@ -1,6 +1,5 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.TreeMap;
 
 
 /**
@@ -81,13 +79,13 @@ public class CalendarFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
         jAdapter = new JournalAdapter(getContext());
         JournalManager.jAdapter = jAdapter;
-        TextView textView = (TextView)rootView.findViewById(R.id.textView);
+        final TextView textView = (TextView)rootView.findViewById(R.id.textView);
         textView.setText(months[currentMonth]+" "+(currentYear+1900));
 
         TextView left = (TextView)rootView.findViewById(R.id.leftArrow);
@@ -97,46 +95,45 @@ public class CalendarFragment extends Fragment {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int lastMonth = currentMonth;
-                int lastYear = currentYear;
-                TreeMap<Integer, ArrayList<JournalManager.Journal>> lMap;
-                while(lastYear!=100||lastMonth!=0){
-                    lastMonth--;
-                    if(lastMonth<0){
-                        lastYear--;
-                        lastMonth=11;
-                    }
-                    lMap = JournalManager.getJournalsInMonth(lastYear,lastMonth);
-                    if(lMap.size()>0){
-                        JournalManager.dateMap = lMap;
-                        currentMonth = lastMonth;
-                        currentYear = lastYear;
-                        jAdapter.notifyDataSetChanged();
+                ArrayList<Date> monthList = new ArrayList<Date>(JournalManager.monthSet);
+                Date nowMonth = new Date(currentYear, currentMonth, 1);
+                int idx=-1;
+                for(int i=0;i<monthList.size();i++){
+                    if(monthList.get(i).getYear()==currentYear&&monthList.get(i).getMonth()==currentMonth){
+                        idx=i;
                         break;
                     }
+                }
+
+                if(idx>0){
+                    Date lastMonth = monthList.get(idx-1);
+                    currentYear=lastMonth.getYear();
+                    currentMonth=lastMonth.getMonth();
+                    JournalManager.dateMap=JournalManager.getJournalsInMonth(currentYear,currentMonth);
+                    textView.setText(months[currentMonth]+" "+(currentYear+1900));
+                    jAdapter.notifyDataSetChanged();
                 }
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int nextMonth = currentMonth;
-                int nextYear = currentYear;
-                TreeMap<Integer, ArrayList<JournalManager.Journal>> lMap;
-                while(nextYear!=(new Date()).getYear()||nextMonth!=(new Date()).getYear()){
-                    nextMonth++;
-                    if(nextMonth>11){
-                        nextYear++;
-                        nextMonth=0;
-                    }
-                    lMap = JournalManager.getJournalsInMonth(nextYear,nextMonth);
-                    if(lMap.size()>0){
-                        JournalManager.dateMap = lMap;
-                        currentMonth = nextMonth;
-                        currentYear = nextYear;
-                        jAdapter.notifyDataSetChanged();
+                ArrayList<Date> monthList = new ArrayList<Date>(JournalManager.monthSet);
+                Date nowMonth = new Date(currentYear, currentMonth, 1);
+                int idx=monthList.size();
+                for(int i=0;i<monthList.size();i++){
+                    if(monthList.get(i).getYear()==currentYear&&monthList.get(i).getMonth()==currentMonth){
+                        idx=i;
                         break;
                     }
+                }
+                if(idx<monthList.size()-1) {
+                    Date nextMonth = monthList.get(idx + 1);
+                    currentYear = nextMonth.getYear();
+                    currentMonth = nextMonth.getMonth();
+                    JournalManager.dateMap = JournalManager.getJournalsInMonth(currentYear, currentMonth);
+                    textView.setText(months[currentMonth] + " " + (currentYear + 1900));
+                    jAdapter.notifyDataSetChanged();
                 }
             }
         });
@@ -147,8 +144,10 @@ public class CalendarFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // go to DayFragment
+                rootView.setVisibility(View.INVISIBLE);
                 DayFragment dFragment = new DayFragment(((JournalManager.Journal)jAdapter.getItem(position)).date.getDate());
-                getFragmentManager().beginTransaction().replace(R.id.content_main, dFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, dFragment).commit();
+                MainActivity.inDayView=true;
             }
         });
 

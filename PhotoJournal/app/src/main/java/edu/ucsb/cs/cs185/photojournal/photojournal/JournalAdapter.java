@@ -52,10 +52,11 @@ public class JournalAdapter extends BaseAdapter {
         if(convertView==null){
             convertView = LayoutInflater.from(mContext).inflate(R.layout.grid_item, parent, false);
         }
+
         JournalManager.Journal item = (JournalManager.Journal)getItem(position);
         ImageView thumbnail = (ImageView)convertView.findViewById(R.id.thumbnail);
         if (thumbnail != null) {
-            thumbnail.setImageBitmap(item.image);
+            thumbnail.setImageBitmap(item.bitmap);
         }
         TextView imgDate = (TextView)convertView.findViewById(R.id.image_date);
         if (imgDate!= null) {

@@ -1,6 +1,7 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -77,7 +78,7 @@ public class DayFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_day, container, false);
         dAdapter = new DayAdapter(getContext(), today);
         JournalManager.dAdapter = dAdapter;
-        TextView textView = (TextView)rootView.findViewById(R.id.title_day);
+        final TextView textView = (TextView)rootView.findViewById(R.id.title_day);
         textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
         TextView left = (TextView)rootView.findViewById(R.id.leftArrow2);
         left.setText("<");
@@ -92,6 +93,7 @@ public class DayFragment extends Fragment {
                     if(JournalManager.dateMap.get(lastDay)!=null){
                         today=lastDay;
                         dAdapter.notifyDataSetChanged();
+                        textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
                     }
                 }
             }
@@ -105,6 +107,8 @@ public class DayFragment extends Fragment {
                     if(JournalManager.dateMap.get(lastDay)!=null){
                         today=lastDay;
                         dAdapter.notifyDataSetChanged();
+                        textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
+
                     }
                 }
             }
@@ -116,6 +120,10 @@ public class DayFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // go to imageViewActivity
+                Intent intent = new Intent(getActivity(), PhotoViewActivity.class);
+                intent.putExtra("date", true);
+                intent.putExtra("pos", position);
+                startActivity(intent);
             }
         });
 
@@ -142,6 +150,7 @@ public class DayFragment extends Fragment {
         }
     }
 */
+
     @Override
     public void onDetach() {
         super.onDetach();

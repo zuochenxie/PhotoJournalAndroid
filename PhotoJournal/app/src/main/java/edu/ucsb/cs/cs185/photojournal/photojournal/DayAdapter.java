@@ -28,7 +28,7 @@ public class DayAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return JournalManager.dateMap.get(mDate).get(position).image;
+        return JournalManager.dateMap.get(mDate).get(position).bitmap;
     }
 
     @Override
