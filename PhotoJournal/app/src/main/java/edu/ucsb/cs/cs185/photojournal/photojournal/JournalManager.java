@@ -32,7 +32,19 @@ public class JournalManager {
     }
 
     public static void addItem(Journal item) {
-        ITEMS.add(item);
+        boolean added = false;
+        for(int i=0;i<ITEMS.size();i++){
+            if(item.date.compareTo(ITEMS.get(i).date)>0){
+                ITEMS.add(i,item);
+                added=true;
+                break;
+            }
+        }
+        if (!added){
+            ITEMS.add(item);
+            added=true;
+        }
+        
         ListFragment.adapter.notifyDataSetChanged();
         Date date = item.date;
         if (dateMap!=null&&date.getYear() == CalendarFragment.currentYear && date.getMonth() == CalendarFragment.currentMonth) {
