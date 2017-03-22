@@ -15,20 +15,18 @@ import android.widget.TextView;
 
 public class DayAdapter extends BaseAdapter {
     public Context mContext;
-    public int mDate;
-    public DayAdapter(Context context, int date) {
+    public DayAdapter(Context context) {
         mContext=context;
-        mDate=date;
     }
 
     @Override
     public int getCount() {
-        return JournalManager.dateMap.get(mDate).size();
+        return JournalManager.dateMap.get(DayFragment.today).size();
     }
 
     @Override
     public Object getItem(int position) {
-        return JournalManager.dateMap.get(mDate).get(position).bitmap;
+        return JournalManager.dateMap.get(DayFragment.today).get(position).bitmap;
     }
 
     @Override

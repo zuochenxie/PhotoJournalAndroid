@@ -1,10 +1,10 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -76,7 +77,7 @@ public class DayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_day, container, false);
-        dAdapter = new DayAdapter(getContext(), today);
+        dAdapter = new DayAdapter(getContext());
         JournalManager.dAdapter = dAdapter;
         final TextView textView = (TextView)rootView.findViewById(R.id.title_day);
         textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
@@ -87,13 +88,36 @@ public class DayFragment extends Fragment {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int lastDay = today;
-                while(lastDay!=1){
-                    lastDay--;
-                    if(JournalManager.dateMap.get(lastDay)!=null){
-                        today=lastDay;
-                        dAdapter.notifyDataSetChanged();
+                ArrayList<Integer> dList = new ArrayList<Integer>(JournalManager.dateMap.keySet());
+                Log.d("leftClick",dList.toString());
+                int idx=dList.indexOf(today);
+                //Log.d("leftClick",""+idx);
+
+                if(idx>0){
+                    today=dList.get(idx-1);
+                    textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
+                    dAdapter.notifyDataSetChanged();
+                }
+                else{
+                    ArrayList<Date> monthList = new ArrayList<Date>(JournalManager.monthSet);
+                    Date nowMonth = new Date(CalendarFragment.currentYear, CalendarFragment.currentMonth, 1);
+                    int idx2=-1;
+                    for(int i=0;i<monthList.size();i++){
+                        if(monthList.get(i).getYear()==CalendarFragment.currentYear&&monthList.get(i).getMonth()==CalendarFragment.currentMonth){
+                            idx2=i;
+                            break;
+                        }
+                    }
+                    if(idx2>0){
+                        Date lastMonth = monthList.get(idx2-1);
+                        CalendarFragment.currentYear=lastMonth.getYear();
+                        CalendarFragment.currentMonth=lastMonth.getMonth();
+                        JournalManager.dateMap=JournalManager.getJournalsInMonth(CalendarFragment.currentYear,CalendarFragment.currentMonth);
+                        dList = new ArrayList<Integer>(JournalManager.dateMap.keySet());
+                        today = dList.get(dList.size()-1);
                         textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
+                        JournalManager.jAdapter.notifyDataSetChanged();
+                        dAdapter.notifyDataSetChanged();
                     }
                 }
             }
@@ -101,14 +125,36 @@ public class DayFragment extends Fragment {
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int lastDay = today;
-                while(lastDay!=32){
-                    lastDay++;
-                    if(JournalManager.dateMap.get(lastDay)!=null){
-                        today=lastDay;
-                        dAdapter.notifyDataSetChanged();
-                        textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
+                ArrayList<Integer> dList = new ArrayList<Integer>(JournalManager.dateMap.keySet());
+                Log.d("rightClick",dList.toString());
+                int idx=dList.indexOf(today);
+                //Log.d("rightClick",""+idx);
 
+                if(idx>-1&&idx<dList.size()-1){
+                    today=dList.get(idx+1);
+                    textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
+                    dAdapter.notifyDataSetChanged();
+                }
+                else{
+                    ArrayList<Date> monthList = new ArrayList<Date>(JournalManager.monthSet);
+                    Date nowMonth = new Date(CalendarFragment.currentYear, CalendarFragment.currentMonth, 1);
+                    int idx2=monthList.size();
+                    for(int i=0;i<monthList.size();i++){
+                        if(monthList.get(i).getYear()==CalendarFragment.currentYear&&monthList.get(i).getMonth()==CalendarFragment.currentMonth){
+                            idx2=i;
+                            break;
+                        }
+                    }
+                    if(idx2<monthList.size()-1){
+                        Date nextMonth = monthList.get(idx2+1);
+                        CalendarFragment.currentYear= nextMonth.getYear();
+                        CalendarFragment.currentMonth= nextMonth.getMonth();
+                        JournalManager.dateMap=JournalManager.getJournalsInMonth(CalendarFragment.currentYear,CalendarFragment.currentMonth);
+                        dList = new ArrayList<Integer>(JournalManager.dateMap.keySet());
+                        today = dList.get(0);
+                        textView.setText(CalendarFragment.months[CalendarFragment.currentMonth] + " " + today + ", " + (CalendarFragment.currentYear+1900));
+                        JournalManager.jAdapter.notifyDataSetChanged();
+                        dAdapter.notifyDataSetChanged();
                     }
                 }
             }
