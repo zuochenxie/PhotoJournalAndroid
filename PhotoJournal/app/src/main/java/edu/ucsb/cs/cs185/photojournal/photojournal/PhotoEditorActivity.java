@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -31,7 +32,12 @@ public class PhotoEditorActivity extends AppCompatActivity {
     private Uri uri;
     private PhotoEditorActivity photoview = this;
     private Bitmap image = null;
-//    BitMapManager images = new BitMapManager();
+    Bundle extras;
+    public int imgIndex;
+    EditText location;
+    EditText caption;
+    EditText title;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,10 @@ public class PhotoEditorActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Upload a Photo");
+        location = (EditText) findViewById(R.id.photo_location);
+        caption = (EditText) findViewById(R.id.photo_caption);
+        title = (EditText) findViewById(R.id.photo_title);
+        imageView = (ImageView) findViewById(R.id.photo_uploader_btn);
 
         Calendar calMax = Calendar.getInstance();
         Calendar calMin = Calendar.getInstance();
@@ -55,6 +65,23 @@ public class PhotoEditorActivity extends AppCompatActivity {
 
         ImageView import_photo = (ImageView) findViewById(R.id.photo_uploader_btn);
         Button upload_btn = (Button) findViewById(R.id.photo_upload_btn);
+
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            Date date_ = ITEMS.get(imgIndex).date;
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(date_);
+
+            imgIndex = extras.getInt("photo");
+            image = ITEMS.get(imgIndex).bitmap;
+            imageView.setImageBitmap(image);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            title.setText(ITEMS.get(imgIndex).title, TextView.BufferType.EDITABLE);
+            location.setText(ITEMS.get(imgIndex).location, TextView.BufferType.EDITABLE);
+            caption.setText(ITEMS.get(imgIndex).description, TextView.BufferType.EDITABLE);
+            dp.updateDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
+        }
+
 
         import_photo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,48 +100,44 @@ public class PhotoEditorActivity extends AppCompatActivity {
         upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Calendar calendar = Calendar.getInstance();
+                int day = dp.getDayOfMonth();
+                int month = dp.getMonth();
+                int year = dp.getYear();
+                calendar.set(year, month, day);
 
                 if(image!=null){
                     //Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                    if(extras != null){
+//                        ITEMS.remove(imgIndex);
+                        ITEMS.get(imgIndex).bitmap = image;
+                        ITEMS.get(imgIndex).title = title.getText().toString();
+                        ITEMS.get(imgIndex).location = location.getText().toString();
+                        ITEMS.get(imgIndex).description = caption.getText().toString();
+                        calendar.set(year, month, day);
+                        ITEMS.get(imgIndex).date = calendar.getTime();
+                    }else {
 
-                    EditText location = (EditText) findViewById(R.id.photo_location);
-                    EditText caption = (EditText) findViewById(R.id.photo_caption);
-                    EditText title = (EditText) findViewById(R.id.photo_title);
-                    DatePicker date = (DatePicker) findViewById(R.id.dp);
-                    Journal newImage = new Journal(uri, image);
-                    newImage.location = location.getText().toString();
-                    newImage.description = caption.getText().toString();
-                    newImage.title = title.getText().toString();
+                        Journal newImage = new Journal(uri, image);
 
-                    int day = dp.getDayOfMonth();
-                    int month = dp.getMonth();
-                    int year =  dp.getYear();
 
-                    Calendar calendar = Calendar.getInstance();
-                    calendar.set(year, month, day);
+                        newImage.location = location.getText().toString();
+                        newImage.description = caption.getText().toString();
+                        newImage.title = title.getText().toString();
 
-                    newImage.date = calendar.getTime();
+                        newImage.date = calendar.getTime();
 
-                    JournalManager.addItem(newImage);
-                    /*
-                    Intent intent = new Intent(photoview, MainActivity.class);
-                    startActivity(intent);
-                    */
+                        JournalManager.addItem(newImage);
+
+                    }
+//                    Intent intent = new Intent(photoview, MainActivity.class);
+//                    startActivity(intent);
+
                     photoview.finish();
 
                 } else{
                     Toast.makeText(photoview, "Please upload your image!", Toast.LENGTH_LONG).show();
                 }
-//                try {
-//                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-//                  images.addImage(bitmap);
-
-
-//                fragment = new ListFragment();
-//                getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
             }
         });
 
@@ -135,7 +158,7 @@ public class PhotoEditorActivity extends AppCompatActivity {
 
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             uri = data.getData();
-            ImageView imageView = (ImageView) findViewById(R.id.photo_uploader_btn);
+
             try{
                 image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                 imageView.setImageBitmap(image);

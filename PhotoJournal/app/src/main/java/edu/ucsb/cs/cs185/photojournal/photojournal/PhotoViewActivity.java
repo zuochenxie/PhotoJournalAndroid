@@ -1,9 +1,12 @@
 package edu.ucsb.cs.cs185.photojournal.photojournal;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -25,7 +28,11 @@ public class PhotoViewActivity extends AppCompatActivity{
     TextView description;
     TextView date;
     TextView location;
+    Button edit;
+    Button delete;
     public int imgIndex;
+    Journal journal;
+    private PhotoViewActivity photoview = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -42,8 +49,9 @@ public class PhotoViewActivity extends AppCompatActivity{
         description = (TextView)findViewById(R.id.entryDescription);
         date = (TextView)findViewById(R.id.entryDate);
         location = (TextView)findViewById(R.id.entryLocation);
+        edit = (Button)findViewById(R.id.edit_btn);
+        delete = (Button)findViewById(R.id.delete_btn);
 
-        Journal journal;
         if(d){
             journal=JournalManager.dateMap.get(DayFragment.today).get(pos);
         }
@@ -91,10 +99,45 @@ public class PhotoViewActivity extends AppCompatActivity{
                 }
             }
         });
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(photoview, PhotoEditorActivity.class);
+                intent.putExtra("photo", imgIndex);
+                startActivity(intent);
+
+            }
+        });
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ITEMS.remove(imgIndex);
+
+                photoview.finish();
+            }
+        });
+
+
+
     }
 
+    @Override
+    public void onResume()
+    {  // After a pause OR at startup
+        super.onResume();
+        //Refresh your stuff here
+        Bitmap img = journal.bitmap;
+        image.setImageBitmap(img);
+        title.setText(journal.title);
+        description.setText(journal.description);
+        location.setText(journal.location);
 
-
-
+        Format formatter = new SimpleDateFormat("MM/dd/yyyy");
+        String s = formatter.format(journal.date);
+        date.setText(s);
+    }
 
 }

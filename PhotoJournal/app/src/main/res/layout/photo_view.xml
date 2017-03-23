@@ -102,13 +102,13 @@
             <Space
                 android:layout_width="15dp"
                 android:layout_height="match_parent" />
-
             <ImageView
                 android:id="@+id/fb_button"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/fb_logo"
                 android:layout_gravity="center_horizontal"/>
+
             <Space
                 android:layout_width="5dp"
                 android:layout_height="match_parent"
@@ -120,7 +120,30 @@
                 android:src="@drawable/twitter_logo"
                 android:layout_gravity="center_horizontal"/>
 
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:id="@+id/edit_btn"
+                android:text="edit" />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:id="@+id/delete_btn"
+                android:text="delete" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 

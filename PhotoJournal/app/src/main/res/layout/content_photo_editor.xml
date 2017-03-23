@@ -17,22 +17,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="caption"
+        android:hint="title"
         android:ems="10"
-        android:layout_marginTop="32dp"
-        android:id="@+id/photo_caption"
-        android:layout_below="@+id/photo_location"
-        android:layout_alignStart="@+id/photo_location" />
-
-    <ImageView
-        android:layout_width="@dimen/box_size"
-        android:layout_height="@dimen/box_size"
-        android:id="@+id/photo_uploader_btn"
-        android:layout_marginTop="68dp"
-        android:alpha="1"
-        android:elevation="7dp"
-        android:background="@drawable/plus_math"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="39dp"
+        android:id="@+id/photo_title"
+        android:layout_below="@+id/photo_uploader_btn"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -46,25 +35,16 @@
         android:layout_below="@+id/photo_title"
         android:layout_alignStart="@+id/photo_title" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/photo_preview"
-        android:layout_marginTop="42dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="title"
+        android:hint="caption"
         android:ems="10"
-        android:layout_marginTop="39dp"
-        android:id="@+id/photo_title"
-        android:layout_below="@+id/photo_uploader_btn"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="32dp"
+        android:id="@+id/photo_caption"
+        android:layout_below="@+id/photo_location"
+        android:layout_alignStart="@+id/photo_location" />
 
     <Button
         android:text="Upload"
@@ -74,6 +54,26 @@
         android:layout_below="@+id/dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp" />
+
+    <ImageView
+        android:layout_width="@dimen/box_size"
+        android:layout_height="@dimen/box_size"
+        android:id="@+id/photo_uploader_btn"
+        android:layout_marginTop="68dp"
+        android:alpha="1"
+        android:elevation="7dp"
+        android:background="@drawable/plus_math"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/photo_preview"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <DatePicker
         android:id="@+id/dp"
